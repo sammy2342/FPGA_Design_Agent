@@ -1,0 +1,243 @@
+{
+  "designs": [
+    {
+      "module_name": "test_counter",
+      "summary": "test_counter: Generated HDL module.",
+      "signature": "module test_counter(input logic clk, input logic rst_n, output logic [3:0] count);",
+      "tags": [
+        "generated_design",
+        "verilog_rag"
+      ]
+    },
+    {
+      "module_name": "counter3",
+      "summary": "counter3: Generated HDL module.",
+      "signature": "module counter3(input wire clk, input wire rst_n, input wire en, output reg [2:0] count, output reg rollover);",
+      "tags": [
+        "generated_design",
+        "verilog_rag"
+      ]
+    },
+    {
+      "design_key": "777118957c0934a2",
+      "module_name": "counter3",
+      "summary": "counter3: Passing counter design with tags clocked, counter, enable, reset, sequential.",
+      "signature": "module counter3(input logic clk, input logic rst, input logic en, output logic [2:0] count);",
+      "rtl": "module counter3(\n    input logic clk,\n    input logic rst,\n    input logic en,\n    output logic [2:0] count\n);\nalways_ff @(posedge clk) begin\n    if (rst) count <= 3'b000;\n    else if (en) count <= count + 1'b1;\nend\nendmodule",
+      "rtl_hash": "7d57729aa07b2f03",
+      "design_type": "counter",
+      "behavior_tags": [
+        "clocked",
+        "counter",
+        "enable",
+        "reset",
+        "sequential"
+      ],
+      "interface_features": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "rst",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "en",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "count",
+          "direction": "output",
+          "width": "2:0"
+        }
+      ],
+      "verification_goals": [],
+      "verification_confidence": 0.0,
+      "dependencies": [],
+      "tags": [
+        "generated_design",
+        "passing_design",
+        "rtl_stored"
+      ],
+      "spec_fingerprint": "1cfab9ffe7ab07aa",
+      "is_exact_cache": false
+    },
+    {
+      "design_key": "d0025c1e9fb7aa46",
+      "module_name": "counter4",
+      "summary": "counter4: Passing counter design with tags clocked, counter, enable, reset, sequential.",
+      "signature": "module counter4(input logic clk, input logic rst, input logic en, output logic [3:0] count);",
+      "rtl": "module counter4(\n    input logic clk,\n    input logic rst,\n    input logic en,\n    output logic [3:0] count\n);\nalways_ff @(posedge clk) begin\n    if (rst) count <= 4'b0000;\n    else if (en) count <= count + 1'b1;\nend\nendmodule",
+      "rtl_hash": "2eadfebc8f99aa35",
+      "design_type": "counter",
+      "behavior_tags": [
+        "clocked",
+        "counter",
+        "enable",
+        "reset",
+        "sequential"
+      ],
+      "interface_features": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "rst",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "en",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "count",
+          "direction": "output",
+          "width": "3:0"
+        }
+      ],
+      "verification_goals": [
+        "increments on each clock when enabled",
+        "resets to zero on rst"
+      ],
+      "verification_confidence": 0.95,
+      "dependencies": [],
+      "tags": [
+        "generated_design",
+        "passing_design",
+        "rtl_stored"
+      ],
+      "spec_fingerprint": "61c15b1dca3cc7d5",
+      "is_exact_cache": true
+    }
+  ],
+  "schema_version": "2.0",
+  "components": [
+    {
+      "component_key": "d296ede3226187b0",
+      "module_name": "counter3",
+      "component_type": "counter_core",
+      "summary": "counter3: Passing counter design with tags clocked, counter, enable, reset, sequential.",
+      "signature": "module counter3(input logic clk, input logic rst, input logic en, output logic [2:0] count);",
+      "rtl": "module counter3(\n    input logic clk,\n    input logic rst,\n    input logic en,\n    output logic [2:0] count\n);\nalways_ff @(posedge clk) begin\n    if (rst) count <= 3'b000;\n    else if (en) count <= count + 1'b1;\nend\nendmodule",
+      "rtl_hash": "7d57729aa07b2f03",
+      "design_type": "counter",
+      "behavior_tags": [
+        "clocked",
+        "counter",
+        "enable",
+        "reset",
+        "sequential"
+      ],
+      "interface_features": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "rst",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "en",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "count",
+          "direction": "output",
+          "width": "2:0"
+        }
+      ],
+      "dependencies": [],
+      "verification_confidence": 0.0,
+      "reusable_standalone": true,
+      "tags": [
+        "component_memory",
+        "passing_component",
+        "counter_core"
+      ]
+    },
+    {
+      "component_key": "8a883265ceb418d7",
+      "module_name": "counter4",
+      "component_type": "counter_core",
+      "summary": "counter4: Passing counter design with tags clocked, counter, enable, reset, sequential.",
+      "signature": "module counter4(input logic clk, input logic rst, input logic en, output logic [3:0] count);",
+      "rtl": "module counter4(\n    input logic clk,\n    input logic rst,\n    input logic en,\n    output logic [3:0] count\n);\nalways_ff @(posedge clk) begin\n    if (rst) count <= 4'b0000;\n    else if (en) count <= count + 1'b1;\nend\nendmodule",
+      "rtl_hash": "2eadfebc8f99aa35",
+      "design_type": "counter",
+      "behavior_tags": [
+        "clocked",
+        "counter",
+        "enable",
+        "reset",
+        "sequential"
+      ],
+      "interface_features": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "rst",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "en",
+          "direction": "input",
+          "width": "1"
+        },
+        {
+          "name": "count",
+          "direction": "output",
+          "width": "3:0"
+        }
+      ],
+      "dependencies": [],
+      "verification_confidence": 0.95,
+      "reusable_standalone": true,
+      "tags": [
+        "component_memory",
+        "passing_component",
+        "counter_core"
+      ]
+    }
+  ],
+  "tb_patterns": [
+    {
+      "tb_key": "ed36341561d26980",
+      "module_name": "counter4",
+      "summary": "counter4: Passing testbench pattern",
+      "tb_text": "\nmodule counter4_tb;\n  logic clk, rst, en;\n  logic [3:0] count;\n\n  counter4 dut(.clk(clk), .rst(rst), .en(en), .count(count));\n\n  initial begin\n    clk = 0;\n    forever #5 clk = ~clk;\n  end\n\n  initial begin\n    rst = 1; en = 0;\n    #10 rst = 0; en = 1;\n    #50 $finish;\n  end\nendmodule\n",
+      "pattern_tags": [
+        "clock_gen",
+        "reset_sequence",
+        "termination_control"
+      ],
+      "verification_goals": [
+        "increments on each clock when enabled",
+        "resets to zero on rst"
+      ],
+      "verification_confidence": 0.95,
+      "tags": [
+        "tb_pattern",
+        "passing_tb_pattern"
+      ]
+    }
+  ],
+  "exact_design_cache": {
+    "61c15b1dca3cc7d5": "d0025c1e9fb7aa46"
+  }
+}
